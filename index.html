@@ -283,7 +283,7 @@ svg.mapsvg{width:100%; height:auto; display:block; background:var(--paper-2); bo
               </div>
               <span style="align-self:center; margin-left:8px;">▢ gris = sin dato</span>
             </div>
-            <p class="map-caption"><b>Qué muestra este mapa:</b> colorea los 87 municipios de Santander según el filtro elegido a la izquierda — variación %, votos netos ganados o nivel absoluto de 2026 — comparando siempre contra 2022. La escala es de <b>quintiles</b>: cada color representa una quinta parte de los municipios ordenados de menor a mayor, no un valor fijo, por eso el mapa resalta quién va mejor <i>dentro del propio departamento</i> y no solo en términos absolutos.</p>
+            <p class="map-caption"><b>Aquí ves:</b> colorea los 87 municipios de Santander según el filtro elegido a la izquierda — variación %, votos netos ganados o nivel absoluto de 2026 — comparando siempre contra 2022. La escala es de <b>quintiles</b>: cada color representa una quinta parte de los municipios ordenados de menor a mayor, no un valor fijo, por eso el mapa resalta quién va mejor <i>dentro del propio departamento</i> y no solo en términos absolutos.</p>
           </div>
           <div style="display:flex; flex-direction:column; gap:14px;">
             <div class="card">
@@ -342,7 +342,7 @@ svg.mapsvg{width:100%; height:auto; display:block; background:var(--paper-2); bo
               </div>
               <span style="align-self:center; margin-left:8px;">▢ gris = sin voto registrado</span>
             </div>
-            <p class="map-caption"><b>Qué muestra este mapa:</b> el color de cada municipio depende solo de cuántos votos sacó Laura Ahumada al Senado en 2026 ahí (escala de quintiles, no valor fijo). Las líneas oscuras marcan el límite de cada departamento o subregión; se muestran juntos, sin cortar el mapa, porque el corredor del Magdalena Medio —donde está su base más fuerte— atraviesa Santander, Bolívar y Antioquia sin respetar esas fronteras administrativas.</p>
+            <p class="map-caption"><b>Aquí ves:</b> el color de cada municipio depende solo de cuántos votos sacó Laura Ahumada al Senado en 2026 ahí (escala de quintiles, no valor fijo). Las líneas oscuras marcan el límite de cada departamento o subregión; se muestran juntos, sin cortar el mapa, porque el corredor del Magdalena Medio —donde está su base más fuerte— atraviesa Santander, Bolívar y Antioquia sin respetar esas fronteras administrativas.</p>
           </div>
           <div style="display:flex; flex-direction:column; gap:14px;">
             <div class="card">
@@ -395,7 +395,7 @@ svg.mapsvg{width:100%; height:auto; display:block; background:var(--paper-2); bo
               </div>
               <span style="align-self:center; margin-left:8px;">▢ gris = 0 votos registrados</span>
             </div>
-            <p class="map-caption"><b>Qué muestra este mapa:</b> el color de cada municipio del país depende de cuántos votos sacó ahí Laura Ahumada al Senado en 2026 (escala de quintiles sobre los municipios con al menos un voto). No se compara contra ningún otro candidato ni contra el total de votos de esa elección en el municipio — solo mide su volumen propio, para ver dónde tiene huella electoral fuera de su departamento base.</p>
+            <p class="map-caption"><b>Aquí ves:</b> el color de cada municipio del país depende de cuántos votos sacó ahí Laura Ahumada al Senado en 2026 (escala de quintiles sobre los municipios con al menos un voto). No se compara contra ningún otro candidato ni contra el total de votos de esa elección en el municipio — solo mide su volumen propio, para ver dónde tiene huella electoral fuera de su departamento base.</p>
           </div>
           <div style="display:flex; flex-direction:column; gap:14px;">
             <div class="card">
@@ -502,8 +502,8 @@ svg.mapsvg{width:100%; height:auto; display:block; background:var(--paper-2); bo
   <!-- ============ PANEL CONVERGENCIA/DIVERGENCIA ============ -->
   <section class="panel" id="panel-conv">
     <div class="panel-head">
-      <h2>¿Dónde el Congreso "acompañó" a la presidencial y dónde no?</h2>
-      <p>Un solo color por municipio: <b>convergencia</b> (rosa/verde) si la variación 2022→2026 del partido elegido en Senado o Cámara fue parecida, en dirección y tamaño, a la del candidato presidencial de su mismo bando; <b>divergencia</b> (azul/gris) si no. No mide votos ni tamaño — solo si los dos patrones territoriales coincidieron.</p>
+      <h2>¿Dónde el Pacto Histórico "acompañó" a Petro/Cepeda y dónde no?</h2>
+      <p>Un solo color por municipio: <b>convergencia</b> (verde) si la ganancia neta de votos del Pacto Histórico en Senado o Cámara (2022→2026) fue de un tamaño parecido, como % del electorado, a la de Petro→Cepeda en el mismo municipio; <b>divergencia</b> (rojo/vino) si no. Esta pestaña compara solo esa pareja — Pacto Histórico y su candidato presidencial.</p>
     </div>
     <div class="kpi-row" id="conv-kpi" style="margin-bottom:14px;"></div>
 
@@ -513,13 +513,6 @@ svg.mapsvg{width:100%; height:auto; display:block; background:var(--paper-2); bo
           <div class="sidebar-group-title">Corporación</div>
           <button class="side-btn active" data-conv-corp="senado">Senado vs. Presidencial</button>
           <button class="side-btn" data-conv-corp="camara">Cámara vs. Presidencial</button>
-        </div>
-        <div class="sidebar-group">
-          <div class="sidebar-group-title">Partido</div>
-          <div class="combo-wrap">
-            <input id="conv-partido-select" placeholder="Haz clic o escribe para buscar…" autocomplete="off" style="width:100%; padding:7px 8px; border-radius:4px; border:1px solid var(--line-strong); font-family:var(--sans); font-size:12px; background:var(--card); color:var(--ink);">
-            <div class="combo-dropdown" id="conv-partido-dropdown"></div>
-          </div>
           <div class="side-note" id="conv-alineado-note"></div>
         </div>
         <div class="sidebar-group">
@@ -586,7 +579,7 @@ svg.mapsvg{width:100%; height:auto; display:block; background:var(--paper-2); bo
           <span class="sw"><i style="background:#3E8C7E"></i>Corredor ampliado (Bolívar sur + Antioquia MM)</span>
           <span class="sw"><i style="background:#D8D2C2"></i>Fuera de alcance</span>
         </div>
-        <p class="map-caption"><b>Qué muestra este mapa:</b> es el único panel donde el color no es una medida directa (votos o %) sino una <b>recomendación calculada</b>. Cada municipio de Santander cae en una sola categoría según las reglas de la derecha; los municipios de Bolívar y Antioquia que sí tienen voto de Ahumada pero no tienen cifras de crecimiento del PH se agrupan aparte, como corredor ampliado a monitorear, no como una categoría con la misma certeza que las de Santander.</p>
+        <p class="map-caption"><b>Aquí ves:</b> es el único panel donde el color no es una medida directa (votos o %) sino una <b>recomendación calculada</b>. Cada municipio de Santander cae en una sola categoría según las reglas de la derecha; los municipios de Bolívar y Antioquia que sí tienen voto de Ahumada pero no tienen cifras de crecimiento del PH se agrupan aparte, como corredor ampliado a monitorear, no como una categoría con la misma certeza que las de Santander.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div class="card">
@@ -1395,7 +1388,7 @@ function renderV2Detail(munName){
     renderV2PuestosMap(munName, puestos);
     const sinMatch = puestos.filter(p=>p.petro2022==null).reduce((a,p)=>a+(p.cepeda2026||0),0);
     const totCep = puestos.reduce((a,p)=>a+(p.cepeda2026||0),0);
-    mapCaption.innerHTML = `<b>Qué muestra este mapa:</b> cada celda del mosaico es el área de influencia aproximada (Voronoi) de un puesto de votación real y georreferenciado, recortada al contorno oficial de ${titleCase(munName)}. El color es la escala de calor de los votos de Cepeda 2026 en ese puesto; las etiquetas marcan la comuna a la que pertenece cada grupo de puestos. No son límites oficiales de comuna —esos no los conseguimos— pero sí son puestos, coordenadas y votos reales. ${fmt1(sinMatch/totCep*100)}% de esos votos corresponde a puestos que no existían en 2022 y por tanto no tienen comparación con Petro.`;
+    mapCaption.innerHTML = `<b>Aquí ves:</b> cada celda del mosaico es el área de influencia aproximada (Voronoi) de un puesto de votación real y georreferenciado, recortada al contorno oficial de ${titleCase(munName)}. El color es la escala de calor de los votos de Cepeda 2026 en ese puesto; las etiquetas marcan la comuna a la que pertenece cada grupo de puestos. No son límites oficiales de comuna —esos no los conseguimos— pero sí son puestos, coordenadas y votos reales. ${fmt1(sinMatch/totCep*100)}% de esos votos corresponde a puestos que no existían en 2022 y por tanto no tienen comparación con Petro.`;
   } else {
     mapDiv.style.display = 'none';
     mapCaption.style.display = 'none';
@@ -2007,8 +2000,8 @@ function renderNalUnified(){
   }
 
   document.getElementById('nal-map-caption').innerHTML = hayPareja
-    ? `<b>Qué muestra este mapa:</b> rosa/vino = ② (2026) sacó más votos que ① (2022) en ese municipio; azul = al revés. Territorio: <b>${scopeLabel}</b>.`
-    : `<b>Qué muestra este mapa:</b> nivel de ${labelA} en 2026 (no hay comparación 2022 disponible para candidatos individuales). Territorio: <b>${scopeLabel}</b>.`;
+    ? `<b>Aquí ves:</b> rosa/vino = ② (2026) sacó más votos que ① (2022) en ese municipio; azul = al revés. Territorio: <b>${scopeLabel}</b>.`
+    : `<b>Aquí ves:</b> nivel de ${labelA} en 2026 (no hay comparación 2022 disponible para candidatos individuales). Territorio: <b>${scopeLabel}</b>.`;
 
   const totalA = feats.reduce((a,f)=>a+f.properties.__va,0), totalB = feats.reduce((a,f)=>a+f.properties.__vb,0);
   const cobertura = feats.filter(f=>f.properties.__va>0||f.properties.__vb>0).length;
@@ -2069,6 +2062,84 @@ document.querySelectorAll('[data-nal-ranksort]').forEach(b=>b.addEventListener('
   renderNalUnified();
 }));
 
+// ---------- núcleos temáticos por departamento (perspectiva crítica, para leer el terreno político) ----------
+// Nota de método: para Norte de Santander se verificó con prensa y reportes humanitarios de 2025-2026
+// (Defensoría del Pueblo, ACNUR, Unidad para las Víctimas). Para el resto se usa conocimiento general
+// verificable sobre la economía política, el conflicto armado y los movimientos sociales de cada
+// departamento — no es investigación de prensa exhaustiva municipio por municipio, y debe leerse como
+// contexto orientador, no como diagnóstico definitivo de cada territorio.
+const DEPT_TEMAS = {
+  'NORTE DE SANTANDER': 'El Catatumbo vive la peor crisis de desplazamiento del país por la guerra entre ELN y disidencias del Frente 33 (más de 60.000 desplazados desde 2025) — el fracaso territorial de la "paz total" ahí es un costo político directo para el gobierno y para cualquier lista que lo represente. La migración venezolana en Cúcuta es el segundo eje: la derecha la usa como bandera de seguridad; la izquierda tiene poco que mostrar en integración migratoria.',
+  'SANTANDER': 'Barrancabermeja y el Magdalena Medio (petróleo, sindicalismo histórico de Ecopetrol) siguen siendo el corazón obrero e industrial de la izquierda santandereana. El área metropolitana de Bucaramanga es más conservadora y sensible a la crisis del sector calzado/confecciones por incertidumbre arancelaria. Santurbán (páramo, minería) es la bandera ambiental con mayor capacidad de movilización social del departamento.',
+  'ANTIOQUIA': 'Uribismo estructural en el Valle de Aburrá y el oriente; el Bajo Cauca y Urabá siguen en disputa entre Clan del Golfo y disidencias por rutas de narcotráfico y minería ilegal, con líderes sociales asesinados de forma recurrente. Medellín tiene una clase media urbana golpeada por el estancamiento económico, terreno disputable si el mensaje es empleo y no solo seguridad.',
+  'VALLE DEL CAUCA': 'Cali carga el estigma persistente del Paro Nacional de 2021 (represión policial, "Puerto Resistencia") — sigue siendo una referencia de movilización juvenil de izquierda. Buenaventura, mayoritariamente afro, combina la mayor riqueza portuaria del Pacífico con algunos de los peores indicadores de pobreza y violencia de bandas del país: el contraste entre puerto rico y ciudad pobre es el argumento más potente contra el modelo económico vigente.',
+  'CAUCA': 'El movimiento indígena (CRIC, la Minga) es el actor político más organizado del departamento y con más experiencia de presión directa al Estado. La disputa territorial entre disidencias de las FARC y fuerza pública por cultivos de coca en el norte y la bota caucana convive con procesos de sustitución de cultivos estancados — el reclamo campesino e indígena de "sustitución real, no fumigación" tiene eco fuerte.',
+  'NARIÑO': 'Costa Pacífica con fuerte presencia afro e indígena, economía de coca en Tumaco y disputa territorial entre disidencias y el ELN; la frontera con Ecuador añade tránsito migratorio. El discurso de sustitución voluntaria de cultivos y titulación de tierras colectivas tiene una base social ya organizada (consejos comunitarios, resguardos).',
+  'CHOCÓ': 'El departamento con los peores indicadores sociales del país pese a su riqueza en biodiversidad y minería — el abandono estatal histórico y el confinamiento de comunidades por Clan del Golfo/ELN en el Baudó y San Juan son la bandera de justicia territorial más directa disponible en Colombia. Población mayoritariamente afro e indígena embera.',
+  'CHOCO': 'El departamento con los peores indicadores sociales del país pese a su riqueza en biodiversidad y minería — el abandono estatal histórico y el confinamiento de comunidades por Clan del Golfo/ELN en el Baudó y San Juan son la bandera de justicia territorial más directa disponible en Colombia. Población mayoritariamente afro e indígena embera.',
+  'CÓRDOBA': 'Zona histórica de poder paramilitar (Clan del Golfo, herencia de las AUC) y de las mayores concentraciones de tierra del país — la reforma agraria y la restitución de tierras son el eje de conflicto más antiguo y más políticamente sensible del departamento, con líderes de restitución bajo amenaza constante.',
+  'CORDOBA': 'Zona histórica de poder paramilitar (Clan del Golfo, herencia de las AUC) y de las mayores concentraciones de tierra del país — la reforma agraria y la restitución de tierras son el eje de conflicto más antiguo y más políticamente sensible del departamento, con líderes de restitución bajo amenaza constante.',
+  'LA GUAJIRA': 'Crisis humanitaria crónica del pueblo wayuu (desnutrición infantil, falta de agua) que convive con la mina de carbón más grande de Colombia (Cerrejón) y la transición energética que amenaza empleos mineros sin un plan de reconversión creíble todavía — es el ejemplo más claro del país de extractivismo que no se traduce en bienestar local.',
+  'CESAR': 'Comparte con La Guajira la economía carbonífera (El Cerrejón/Drummond) y sus mismas tensiones de transición energética y pasivos ambientales; en el sur, Aguachica y la vía a la Costa concentran una economía ganadera con fuerte herencia de poder paramilitar histórico.',
+  'MAGDALENA': 'Santa Marta y la Sierra Nevada combinan turismo en expansión con comunidades indígenas (kogui, arhuaco, wiwa) que resisten presión territorial por construcción no regulada; en el sur, economía agroindustrial (palma, banano) con relaciones laborales tensas.',
+  'BOLÍVAR': 'Cartagena exhibe el contraste más visible del país entre turismo/patrimonio de lujo y cinturones de miseria en sus periferias (Nelson Mandela, Olaya Herrera). El sur de Bolívar (Cantagallo, San Pablo, Simití) es corredor histórico del ELN y la minería de oro ilegal, con fuerte tradición de organización campesina y sindical petrolera ligada a Barrancabermeja.',
+  'BOLIVAR': 'Cartagena exhibe el contraste más visible del país entre turismo/patrimonio de lujo y cinturones de miseria en sus periferias (Nelson Mandela, Olaya Herrera). El sur de Bolívar (Cantagallo, San Pablo, Simití) es corredor histórico del ELN y la minería de oro ilegal, con fuerte tradición de organización campesina y sindical petrolera ligada a Barrancabermeja.',
+  'ATLÁNTICO': 'Barranquilla y su área metropolitana tienen la economía más dinámica del Caribe, pero con un clientelismo político muy asentado (maquinarias tradicionales, "ubérrimo" control local) que hace difícil el voto de opinión por fuera de esas estructuras.',
+  'ATLANTICO': 'Barranquilla y su área metropolitana tienen la economía más dinámica del Caribe, pero con un clientelismo político muy asentado (maquinarias tradicionales, "ubérrimo" control local) que hace difícil el voto de opinión por fuera de esas estructuras.',
+  'SUCRE': 'Departamento con alta concentración de tierra improductiva y fuerte legado de clientelismo político tradicional (casos judiciales por parapolítica en la región); la ganadería extensiva convive con reclamos campesinos de acceso a tierra sin resolver.',
+  'CUNDINAMARCA': 'La Sabana de Bogotá enfrenta expansión urbana descontrolada, presión inmobiliaria sobre tierras agrícolas y crisis de agua/páramos (Chingaza, Sumapaz); el cinturón industrial de Soacha-Facatativá concentra población migrante de Bogotá con condiciones laborales precarias — terreno natural para un discurso de derecho a la ciudad y ordenamiento territorial.',
+  'BOYACÁ': 'Departamento agrario y minero (carbón, esmeraldas) con fuerte tradición conservadora y católica; el sector agrícola (papa, cebolla) enfrenta crisis recurrentes de precios que generan paros campesinos periódicos — es terreno más de reivindicación gremial que de identidad ideológica de izquierda.',
+  'BOYACA': 'Departamento agrario y minero (carbón, esmeraldas) con fuerte tradición conservadora y católica; el sector agrícola (papa, cebolla) enfrenta crisis recurrentes de precios que generan paros campesinos periódicos — es terreno más de reivindicación gremial que de identidad ideológica de izquierda.',
+  'TOLIMA': 'Territorio históricamente marcado por la presencia de las FARC y una fuerte tradición agraria (arroz, café, algodón) con organizaciones campesinas activas; el Cañón de las Hermosas y el conflicto por el proyecto minero La Colosa muestran una tensión ambiental-extractivista latente.',
+  'HUILA': 'Economía cafetera y del Alto Magdalena, con el proyecto hidroeléctrico de El Quimbo como referencia de conflicto ambiental y de desplazamiento de pescadores/agricultores no resuelto del todo — un antecedente útil para un discurso crítico del extractivismo energético sin consulta real.',
+  'CALDAS': 'Eje cafetero golpeado por la volatilidad de precios internacionales del café y el éxodo de jóvenes hacia las ciudades; Manizales tiene una base universitaria y de clase media con sensibilidad ambiental (páramos, volcán Nevado del Ruiz).',
+  'RISARALDA': 'Pereira y el eje cafetero comparten la crisis estructural del café; fuerte presencia de población migrante venezolana y retornada, con tensiones de integración laboral e informalidad creciente.',
+  'QUINDÍO': 'El departamento más pequeño del eje cafetero, con una economía cada vez más volcada al turismo (Salento, Filandia) que desplaza la vocación agrícola tradicional y encarece la vivienda para la población local — gentrificación rural con poca discusión política todavía.',
+  'QUINDIO': 'El departamento más pequeño del eje cafetero, con una economía cada vez más volcada al turismo (Salento, Filandia) que desplaza la vocación agrícola tradicional y encarece la vivienda para la población local — gentrificación rural con poca discusión política todavía.',
+  'META': 'Economía petrolera (Castilla, Rubiales) y ganadera con fuerte presencia de comunidades en proceso de reincorporación de excombatientes de las FARC (antiguo ETCR en Vista Hermosa y La Macarena) — el cumplimiento o incumplimiento del Acuerdo de Paz ahí es una bandera política directa y verificable.',
+  'CASANARE': 'Departamento petrolero con alta dependencia de regalías y fuerte desigualdad entre la bonanza extractiva y el desarrollo rural real; ganadería extensiva y baja diversificación económica.',
+  'PUTUMAYO': 'Territorio cocalero por excelencia, con fuerte presencia de disidencias de las FARC tras el incumplimiento parcial de los programas de sustitución de cultivos (PNIS); frontera con Ecuador y Perú, población indígena importante (inga, kamëntsá).',
+  'CAQUETÁ': 'Territorio cocalero y ganadero en expansión sobre selva amazónica (deforestación asociada a acaparamiento de tierras post-FARC); antiguas zonas de control guerrillero con procesos de reincorporación aún frágiles.',
+  'CAQUETA': 'Territorio cocalero y ganadero en expansión sobre selva amazónica (deforestación asociada a acaparamiento de tierras post-FARC); antiguas zonas de control guerrillero con procesos de reincorporación aún frágiles.',
+  'ARAUCA': 'Bastión histórico del ELN y frontera activa con Venezuela; economía petrolera con regalías que no se traducen en desarrollo visible, y disputa territorial violenta entre ELN y disidencias por el control de rentas ilegales.',
+  'GUAVIARE': 'Puerta de entrada a la Amazonía, con deforestación acelerada ligada a acaparamiento de tierras y ganadería extensiva tras la desmovilización de las FARC; economía cocalera persistente pese a los programas de sustitución.',
+  'VICHADA': 'Departamento de baja densidad poblacional con creciente acaparamiento de tierras para agroindustria (arroz, palma) en la altillanura, y presencia de resguardos indígenas con reclamos territoriales activos frente a ese avance agroindustrial.',
+  'GUAINÍA': 'Territorio de mayoría indígena en la Amazonía, con estado casi ausente en servicios básicos y presión creciente de minería ilegal de oro sobre ríos y resguardos.',
+  'GUAINIA': 'Territorio de mayoría indígena en la Amazonía, con estado casi ausente en servicios básicos y presión creciente de minería ilegal de oro sobre ríos y resguardos.',
+  'VAUPÉS': 'Uno de los departamentos con menor presencia estatal del país, población mayoritariamente indígena, aislamiento geográfico severo y dependencia casi total de transporte fluvial/aéreo — el discurso de abandono estatal es literal, no retórico.',
+  'VAUPES': 'Uno de los departamentos con menor presencia estatal del país, población mayoritariamente indígena, aislamiento geográfico severo y dependencia casi total de transporte fluvial/aéreo — el discurso de abandono estatal es literal, no retórico.',
+  'AMAZONAS': 'Departamento amazónico de baja densidad poblacional con fuerte identidad indígena y ambiental; la deforestación y la minería ilegal de oro son las tensiones territoriales centrales, junto con la casi total ausencia de infraestructura estatal por fuera de Leticia.',
+  'ARCHIPIELAGO DE SAN ANDRES PROVIDENCIA Y SANTA CATALINA': 'Comunidad raizal con reclamos históricos de autonomía y control sobre su propio territorio marítimo (el fallo de La Haya con Nicaragua sigue siendo herida abierta); la sobrepoblación continental y el modelo turístico extractivo generan tensión creciente con la identidad isleña.',
+  'SANTAFE DE BOGOTA D.C': 'Ciudad con la base de votantes de opinión más grande del país, polarizada entre una franja progresista consolidada (centro, sur y localidades populares) y un electorado más conservador en el norte; la movilidad, la seguridad urbana y el costo de vida son los tres ejes que deciden elecciones locales, más que la identidad ideológica nacional.',
+};
+function nalTemasDept(deptName){
+  return DEPT_TEMAS[stripAccentsUp(deptName).replace(/Á/g,'A').replace(/É/g,'E').replace(/Í/g,'I').replace(/Ó/g,'O').replace(/Ú/g,'U')] || DEPT_TEMAS[deptName] || null;
+}
+
+// ---------- lectura de alianzas: ¿ir solo o coaligar? a partir de la fuerza real en el territorio ----------
+function nalLecturaAlianzas(scopeFeats, scopeLabel){
+  const totalPHVotos = scopeFeats.reduce((a,f)=>a+f.properties.__vb,0);
+  const totalEmitCorp = scopeFeats.reduce((a,f)=>a+nalTotalEmitidoParaCfg(NAL_ELECCIONES[nalSel.b.eleccion], f.properties.key),0);
+  const phShare = totalEmitCorp>0 ? totalPHVotos/totalEmitCorp*100 : null;
+
+  const cepedaCode = Object.keys(NAL_ELECCIONES.pres2v26.names).find(c=>/CEPEDA/i.test(NAL_ELECCIONES.pres2v26.names[c]));
+  const totalCepeda = scopeFeats.reduce((a,f)=>a+((NAL_ELECCIONES.pres2v26.data[f.properties.key]||{})[cepedaCode]||0),0);
+  const totalEmitPres = scopeFeats.reduce((a,f)=>a+nalTotalEmitidoParaCfg(NAL_ELECCIONES.pres2v26, f.properties.key),0);
+  const presShare = totalEmitPres>0 ? totalCepeda/totalEmitPres*100 : null;
+
+  if(phShare==null || presShare==null) return '';
+  const fuerteAmbas = phShare>=35 && presShare>=45;
+  const debilAmbas = phShare<15 && presShare<35;
+
+  if(fuerteAmbas){
+    return `Con ${fmt1(phShare)}% del Congreso y ${fmt1(presShare)}% de la presidencial en ${scopeLabel}, tienes piso propio suficiente para <b style="color:#fff;">llegar a una alcaldía o gobernación con candidatura propia</b>: puedes coaligar si te conviene la gobernabilidad, pero no lo necesitas para competir en serio.`;
+  } else if(debilAmbas){
+    return `Con apenas ${fmt1(phShare)}% del Congreso y ${fmt1(presShare)}% de la presidencial en ${scopeLabel}, ir en solitario en 2027 es <b style="color:#fff;">una apuesta de alto riesgo</b> — sin coalición amplia (Verde, sectores del liberalismo, movimientos sociales locales) el resultado más probable es quedar fuera de la gobernación o la alcaldía, no solo perder votos.`;
+  } else {
+    return `Con ${fmt1(phShare)}% del Congreso y ${fmt1(presShare)}% de la presidencial en ${scopeLabel}, estás en <b style="color:#fff;">zona intermedia</b>: suficiente para exigir un puesto visible en la lista a la alcaldía o la gobernación, insuficiente para ganarla solo — la decisión depende más de quién más compita por ese mismo electorado que de tu fuerza propia.`;
+  }
+}
+
 function renderNalAnalisis(feats, hayPareja, alineado, scopeLabel){
   const el = document.getElementById('nal-analisis');
   if(!hayPareja){
@@ -2119,7 +2190,7 @@ function renderNalAnalisis(feats, hayPareja, alineado, scopeLabel){
     convergenciaHtml = `
       <div style="margin-top:14px; padding-top:14px; border-top:1px solid rgba(251,249,244,.15);">
         <h4 style="color:#E8A6BA; font-size:11.5px; margin:0 0 8px; letter-spacing:.02em;">CONVERGENCIA CON EL VOTO PRESIDENCIAL <span title="${NAL_CONV_INFO.replace(/"/g,'&quot;')}" style="cursor:help; border:1px solid rgba(251,249,244,.4); border-radius:50%; padding:0 5px; font-size:9px; color:rgba(251,249,244,.7);">?</span></h4>
-        <p style="font-size:12px; line-height:1.6; color:rgba(251,249,244,.75); margin:0 0 10px;">Se comparó la variación 2022→2026 de <b style="color:#fff;">${titleCase(nalLabel('a'))}</b> contra la variación de <b style="color:#fff;">${titleCase(alineado.nombreA||'')} → ${titleCase(alineado.nombreB||'')}</b> (${alineado.lado}), municipio por municipio, en ${scopeLabel}.</p>
+        <p style="font-size:12px; line-height:1.6; color:rgba(251,249,244,.75); margin:0 0 10px;">Aquí comparas la variación 2022→2026 de <b style="color:#fff;">${titleCase(nalLabel('a'))}</b> contra la de <b style="color:#fff;">${titleCase(alineado.nombreA||'')} → ${titleCase(alineado.nombreB||'')}</b> (${alineado.lado}), municipio por municipio, en ${scopeLabel}.</p>
         ${barras}
         <p style="font-size:11px; line-height:1.55; color:rgba(251,249,244,.6); margin:10px 0 0;">Esto describe <b>patrones territoriales agregados</b> por municipio — no demuestra que sean los mismos votantes individuales moviéndose entre elecciones.</p>
       </div>`;
@@ -2145,6 +2216,18 @@ function renderNalAnalisis(feats, hayPareja, alineado, scopeLabel){
     </p>
     ${deptoHtml}
     ${sintesisConv ? `<p style="font-size:12.5px; line-height:1.65; color:rgba(251,249,244,.82); margin:0 0 8px;"><b style="color:#E8A6BA;">De cara a 2027:</b> ${sintesisConv}</p>` : ''}
+    ${nal_territorio.tipo!=='nacional' ? (()=>{
+      const deptRef = feats.length ? feats[0].properties.dpto : null;
+      const temas = deptRef ? nalTemasDept(deptRef) : null;
+      const alianzas = nalLecturaAlianzas(feats, scopeLabel);
+      if(!temas && !alianzas) return '';
+      return `<div style="margin-top:14px; padding-top:14px; border-top:1px solid rgba(251,249,244,.15);">
+        <h4 style="color:#E8A6BA; font-size:11.5px; margin:0 0 8px; letter-spacing:.02em;">PARA LA ALCALDÍA O LA GOBERNACIÓN DE 2027, ¿SOLOS O EN COALICIÓN?</h4>
+        ${alianzas?`<p style="font-size:12.5px; line-height:1.65; color:rgba(251,249,244,.82); margin:0 0 10px;">${alianzas}</p>`:''}
+        ${temas?`<h4 style="color:#E8A6BA; font-size:11.5px; margin:14px 0 8px; letter-spacing:.02em;">LO QUE LE IMPORTA A ESTE TERRITORIO</h4>
+        <p style="font-size:12.5px; line-height:1.7; color:rgba(251,249,244,.82); margin:0;">${temas}</p>`:''}
+      </div>`;
+    })() : ''}
     ${convergenciaHtml}
   </div>`;
 }
@@ -2210,21 +2293,12 @@ function convPresAlineado(cfgA, codeA){
   };
 }
 
-const convCombo = setupCombo('conv-partido-select', 'conv-partido-dropdown', (code)=>{
-  conv_code = code;
-  renderConvergenciaPanel();
-});
-
 function populateConvControles(){
   const pair = NAL_CORP_PAIRS[conv_corp];
   const cfgA = NAL_ELECCIONES[pair.a];
   const ranked = nalNationalTotals(cfgA);
-  convCombo.setOptions(ranked.map(([code,v])=>[labelFor(cfgA, code, v), code]));
-  if(!conv_code || !ranked.some(([c])=>c===conv_code)){
-    conv_code = (ranked.find(([c])=>/PACTO HIST/i.test(cfgA.names[c]||'')) || ranked[0])[0];
-  }
-  const v = ranked.find(([c])=>c===conv_code)[1];
-  convCombo.setValue(labelFor(cfgA, conv_code, v));
+  // Esta pestaña es exclusivamente Pacto Histórico vs. Petro/Cepeda — sin selector de partido.
+  conv_code = (ranked.find(([c])=>/PACTO HIST/i.test(cfgA.names[c]||'')) || ranked[0])[0];
 }
 
 document.querySelectorAll('[data-conv-corp]').forEach(b=>b.addEventListener('click', ()=>{
@@ -2309,7 +2383,7 @@ function renderConvergenciaPanel(){
     `<span class="sw"><i style="background:${color}"></i>${clase}</span>`
   ).join('') + `<span class="sw"><i style="background:#E4E0D4"></i>Sin dato</span>`;
 
-  document.getElementById('conv-map-caption').innerHTML = `<b>Qué muestra este mapa:</b> el color es <b>solo</b> la categoría de convergencia/divergencia entre ${labelPartido} en ${corpLabel} y ${alineado.lado} en ${scopeLabel} — no representa volumen de votos. La categoría se calcula comparando la posición relativa (percentil) de cada municipio dentro de la distribución <b>nacional</b> completa, aunque el mapa esté filtrado a un territorio más pequeño. <span title="${NAL_CONV_INFO.replace(/"/g,'&quot;')}" style="cursor:help; border:1px solid var(--ink-dimmer); border-radius:50%; padding:0 5px; font-size:9px;">?</span>`;
+  document.getElementById('conv-map-caption').innerHTML = `<b>Aquí ves:</b> el color es <b>solo</b> la categoría de convergencia/divergencia entre ${labelPartido} en ${corpLabel} y ${alineado.lado} en ${scopeLabel} — no representa volumen de votos. Comparo la posición relativa (percentil) de cada municipio dentro de la distribución <b>nacional</b> completa, aunque estés viendo un territorio más pequeño. <span title="${NAL_CONV_INFO.replace(/"/g,'&quot;')}" style="cursor:help; border:1px solid var(--ink-dimmer); border-radius:50%; padding:0 5px; font-size:9px;">?</span>`;
 
   const clasificados = feats.map(f=>f.properties.__conv).filter(Boolean);
   const total = clasificados.length;
